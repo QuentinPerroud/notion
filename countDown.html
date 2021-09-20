@@ -28,7 +28,7 @@ body{
 }
 
 .days {
-  background: #EF2F3C;
+  background: #F0A202;
 }
 
 .hours {
@@ -92,16 +92,9 @@ body{
     
 <div id="timer">
     
-    <div class="months"> 
-        <div id="months" class="numbers"> </div>Mois</div> 
     <div class="days"> 
         <div id="days" class="numbers "> </div>Jours</div> 
-      <div class="hours"> 
-        <div  id="hours" class="numbers"> </div>Heures</div> 
-      <div class="minutes"> 
-        <div  id="minutes" class="numbers"> </div>minutes</div> 
-      <div   class="seconds"> 
-        <div id="seconds" class="numbers"> </div>seconds</div> 
+
       </div>
 
 </div>
@@ -122,19 +115,17 @@ let timer = setInterval(function() {
   const diff = myDate - today;
 
   // math
-//  let months = Math.floor((diff / (1000 * 60 * 60 * 24))/30) ;
-  let months = diff.GetMonth();
   let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+//  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+//  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
   // display
-  document.getElementById("months").innerHTML=months 
+//  document.getElementById("months").innerHTML=months 
   document.getElementById("days").innerHTML=days
-  document.getElementById("hours").innerHTML=hours
-  document.getElementById("minutes").innerHTML=minutes
-  document.getElementById("seconds").innerHTML=seconds
+//  document.getElementById("hours").innerHTML=hours
+//  document.getElementById("minutes").innerHTML=minutes
+//document.getElementById("seconds").innerHTML=seconds
 
 
 
