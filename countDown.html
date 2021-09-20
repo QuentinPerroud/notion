@@ -122,7 +122,8 @@ let timer = setInterval(function() {
   const diff = myDate - today;
 
   // math
-  let months = Math.floor((diff / (1000 * 60 * 60 * 24))/30) ;
+//  let months = Math.floor((diff / (1000 * 60 * 60 * 24))/30) ;
+  let months = diff.GetMonth();
   let days = Math.floor(diff / (1000 * 60 * 60 * 24));
   let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
