@@ -20,7 +20,7 @@ body{
   letter-spacing: 5px;
 }
 
-.days, .hours, .minutes, .seconds {
+.days, .hours, .minutes, .seconds, .months {
   display: inline-block;
   padding: 20px;
   width: 100px;
@@ -44,6 +44,10 @@ body{
   background: #F0A202;
 }
 
+.months {
+  background: #F0A202;
+}
+        
 .numbers {
   font-family: 'Montserrat', sans-serif;
   color:  #183059;
@@ -87,7 +91,9 @@ body{
 <body>
     
 <div id="timer">
-
+    
+    <div class="months"> 
+        <div id="months" class="numbers"> </div>Mois</div> 
     <div class="days"> 
         <div id="days" class="numbers "> </div>Jours</div> 
       <div class="hours"> 
@@ -116,12 +122,14 @@ let timer = setInterval(function() {
   const diff = myDate - today;
 
   // math
+  let months = Math.floor((diff / (1000 * 60 * 60 * 24))/30) ;
   let days = Math.floor(diff / (1000 * 60 * 60 * 24));
   let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
   // display
+  document.getElementById("months").innerHTML=months 
   document.getElementById("days").innerHTML=days
   document.getElementById("hours").innerHTML=hours
   document.getElementById("minutes").innerHTML=minutes
