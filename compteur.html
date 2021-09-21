@@ -20,7 +20,7 @@ body{
   letter-spacing: 5px;
 }
 
-.days, .hours, .minutes, .seconds, .months {
+.days, .hours, .minutes, .seconds {
   display: inline-block;
   padding: 20px;
   width: 100px;
@@ -28,7 +28,7 @@ body{
 }
 
 .days {
-  background: #F0A202;
+  background: #EF2F3C;
 }
 
 .hours {
@@ -44,10 +44,6 @@ body{
   background: #F0A202;
 }
 
-.months {
-  background: #F0A202;
-}
-        
 .numbers {
   font-family: 'Montserrat', sans-serif;
   color:  #183059;
@@ -91,11 +87,15 @@ body{
 <body>
     
 <div id="timer">
-    <div class="months"> 
-        <div id="Months" class="numbers "> </div>Mois</div> 
-    <div class="days"> 
-        <div id="days" class="numbers "> </div>Jours</div> 
 
+    <div class="days"> 
+        <div id="days" class="numbers "> </div>days</div> 
+      <div class="hours"> 
+        <div  id="hours" class="numbers"> </div>Mois</div> 
+      <div class="minutes"> 
+        <div  id="minutes" class="numbers"> </div>minutes</div> 
+      <div   class="seconds"> 
+        <div id="seconds" class="numbers"> </div>seconds</div> 
       </div>
 
 </div>
@@ -119,19 +119,18 @@ let timer = setInterval(function() {
 
   // math
     let days = diff.getUTCDate()-1; 
-    let months = diff.getUTCMonth();
- // let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-//  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-//  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    let hours = diff.getUTCMonth();
+// math
+//  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
   // display
-  document.getElementById("months").innerHTML=months 
   document.getElementById("days").innerHTML=days
-//  document.getElementById("hours").innerHTML=hours
-//  document.getElementById("minutes").innerHTML=minutes
-//document.getElementById("seconds").innerHTML=seconds
-
+  document.getElementById("hours").innerHTML=hours
+  document.getElementById("minutes").innerHTML=minutes
+  document.getElementById("seconds").innerHTML=seconds
 
 
 }, 1);
