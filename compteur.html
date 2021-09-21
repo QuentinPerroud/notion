@@ -111,8 +111,10 @@ let timer = setInterval(function() {
   // get today's date
   const today = new Date().getTime();
 
-  // get the difference
-  const diff =  today - myDate;
+ var diff 	= new Date(today.getTime() - myDate.getTime());
+    
+    // get the difference
+ // const diff =  today - myDate;
 
   // math
     let days = diff.getUTCMonth();
