@@ -93,7 +93,7 @@ body{
 <div id="timer">
     
     <div class="days"> 
-        <div id="days" class="numbers "> </div>Jours Restants</div> 
+        <div id="days" class="numbers "> </div>Jours de grosesse</div> 
 
       </div>
 
@@ -115,7 +115,8 @@ let timer = setInterval(function() {
   const diff =  today - myDate;
 
   // math
-  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    let days = diff.getUTCMonth();
+ // let days = Math.floor(diff / (1000 * 60 * 60 * 24));
 //  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 //  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
 //  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
