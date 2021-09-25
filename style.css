@@ -10,7 +10,7 @@ body {
   display: grid;
   overflow: hidden;
   place-items: center;
-  background: linear-gradient(-45deg, #c4d2ef, #dfe6f6);
+ 
 }
 .hr,
 .min,
