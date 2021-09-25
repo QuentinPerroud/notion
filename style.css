@@ -11,7 +11,7 @@ body {
   display: grid;
   overflow: hidden;
   place-items: center;
-  background-color: transparent;
+  background-color: white;
 }
 .hr,
 .min,
