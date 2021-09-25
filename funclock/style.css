@@ -10,7 +10,7 @@ body {
   display: grid;
   overflow: hidden;
   place-items: center;
-  background color : white;
+  background-color: white;
 }
 .hr,
 .min,
